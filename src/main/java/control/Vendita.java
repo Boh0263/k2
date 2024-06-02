@@ -60,7 +60,7 @@ public class Vendita extends HttpServlet {
 		                }
 		                else {
 		                	if (item.getFieldName().compareTo("nome") == 0) {
-		                		product.setNome(item.getString());
+		                		product.setNome(HtmlEscaper.escapeHtml(item.getString()));
 		                	}
 		                	else if (item.getFieldName().compareTo("prezzo") == 0) {
 		                		product.setPrezzo(Double.parseDouble(item.getString()));
@@ -75,7 +75,7 @@ public class Vendita extends HttpServlet {
 								product.setTag(item.getString());
 							}
 							else if (item.getFieldName().compareTo("descrizione") == 0) {
-		                		product.setDescrizione(item.getString());
+		                		product.setDescrizione(HtmlEscaper.escapeHtml(item.getString()));
 		                	}
 		                }
 		            }
