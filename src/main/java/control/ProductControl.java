@@ -114,6 +114,7 @@ public class ProductControl extends HttpServlet {
 		try { 
 			request.removeAttribute("products");
 			request.setAttribute("products", model.doRetrieveAll(tipologia));
+			
 		} catch (SQLException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
@@ -122,7 +123,7 @@ public class ProductControl extends HttpServlet {
 		dispatcher.forward(request, response);
 		}
 	}
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
