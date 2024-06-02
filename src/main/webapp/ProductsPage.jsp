@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="model.ProductBean, model.UserBean, java.util.*, javax.servlet.RequestDispatcher, java.text.DecimalFormat"%>
+	pageEncoding="UTF-8" import="model.ProductBean, model.UserBean, java.util.*, javax.servlet.RequestDispatcher, java.text.DecimalFormat" errorPage="error-page.jsp" %>
 <%
 	Collection<?> products = (Collection<?>) request.getAttribute("products");
 	if(products == null) {
